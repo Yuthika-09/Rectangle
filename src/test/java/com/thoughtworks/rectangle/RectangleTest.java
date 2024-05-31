@@ -23,5 +23,20 @@ public class RectangleTest {
         assertThat(actualArea, is(closeTo(expectedArea, 0.001)));
 
     }
+
+    @Test
+    void shouldReturnPerimeterWhenLengthAndBreadthAreGiven(){
+
+        double length = 5.0;
+        double breadth = 20.0;
+
+        double expectedPerimeter = 50.0;
+        
+        Rectangle rectangle = new Rectangle(length, breadth);
+        double actualPerimeter = rectangle.perimeter();
+        
+        assertThat(actualPerimeter, is(closeTo(expectedPerimeter, 0.001)));
+
+    }
     
 }

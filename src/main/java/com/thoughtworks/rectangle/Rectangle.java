@@ -16,4 +16,10 @@ public class Rectangle {
 
         return (this.length * this.breadth);
     }
+
+    public double perimeter()
+    {
+        double rectanglePerimeter = 2*(this.length + this.breadth);
+        return rectanglePerimeter;
+    }
 }
