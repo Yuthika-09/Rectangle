@@ -1,7 +1,8 @@
 package com.thoughtworks.rectangle;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.closeTo;
+import static org.hamcrest.Matchers.is;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,15 +12,16 @@ public class RectangleTest {
     @Test
     void shouldReturnAreaWhenLengthAndBreadthAreGiven(){
 
-        int length = 5;
-        int breadth = 20;
+        double length = 5.0;
+        double breadth = 20.0;
 
-        int expectedArea = 100; 
+        double expectedArea = 100.0; 
 
         Rectangle rectangle = new Rectangle(length, breadth);
-        int actualArea = rectangle.area(); 
+        double actualArea = rectangle.area(); 
 
-        assertThat(actualArea, equalTo(expectedArea));
+        assertThat(actualArea, is(closeTo(expectedArea, 0.001)));
+
     }
     
 }
